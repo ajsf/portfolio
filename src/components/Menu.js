@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const Menu = props => (
-  <nav id="menu">
+  <nav id="menu" ref={props.domRef}>
     <div className="inner">
       <h2>Menu</h2>
       <ul>
@@ -19,12 +19,9 @@ const Menu = props => (
         <li>
           <Link to="/generic">Resume</Link>
         </li>
-        <li>
-          <Link to="/elements">Elements</Link>
-        </li>
       </ul>
     </div>
-    <div className="close" onClick={props.onToggleMenu} >
+    <div className="close" onClick={props.onToggleMenu}>
       Close
     </div>
   </nav>

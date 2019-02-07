@@ -12,26 +12,41 @@ class Layout extends React.Component {
       isMenuVisible: false,
       loading: 'is-loading',
     }
-    this.handleToggleMenu = this.handleToggleMenu.bind(this)
+    this.childRef = React.createRef()
   }
 
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
       this.setState({ loading: '' })
     }, 100)
+    document.addEventListener('keydown', this.handleEscape, false)
   }
 
   componentWillUnmount() {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
+    document.removeEventListener('keydown', this.handleEscape, false)
   }
 
-  handleToggleMenu() {
-    console.log('Handling toggle menu')
+  handleToggleMenu = () => {
     this.setState({
       isMenuVisible: !this.state.isMenuVisible,
     })
+  }
+
+  handleBodyClick = e => {
+    if (!this.childRef.current.contains(e.target) && this.state.isMenuVisible) {
+      e.preventDefault()
+      this.handleToggleMenu()
+    }
+  }
+
+  handleEscape = e => {
+    if (e.keyCode === 27 && this.state.isMenuVisible) {
+      e.preventDefault()
+      this.handleToggleMenu()
+    }
   }
 
   render() {
@@ -42,13 +57,14 @@ class Layout extends React.Component {
         className={`body ${this.state.loading} ${
           this.state.isMenuVisible ? 'is-menu-visible' : ''
         }`}
+        onClick={this.handleBodyClick}
       >
         <div id="wrapper">
           <Header onToggleMenu={this.handleToggleMenu} />
           {children}
           <Footer />
         </div>
-        <Menu onToggleMenu={this.handleToggleMenu} />
+        <Menu domRef={this.childRef} onToggleMenu={this.handleToggleMenu} />}
       </div>
     )
   }
