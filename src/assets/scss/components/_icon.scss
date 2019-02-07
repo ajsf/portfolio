@@ -15,9 +15,6 @@
 			display: none;
 		}
 
-		&.style1 {
-		}
-
 		&.style2 {
 			@include vendor('transition', (
 				'background-color #{_duration(transition)} ease-in-out',
@@ -32,7 +29,7 @@
 			display: inline-block;
 			text-align: center;
 			line-height: 2.65em;
-			color: inherit;
+			color: _palette(fg-bold);
 
 			&:before {
 				font-size: 1.1em;

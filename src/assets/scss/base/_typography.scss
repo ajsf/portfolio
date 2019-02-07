@@ -7,7 +7,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: _palette(fg);
+		color: _palette(fg-dark);
 		font-family: _font(family);
 		font-size: 20pt;
 		font-weight: _font(weight);
@@ -52,7 +52,7 @@
 
 	h1 {
 		font-size: 3em;
-		color: _palette(fg-bold);
+		color: _palette(fg);
 		font-weight: _font(weight-bold-alt);
 		line-height: 1.2;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -73,7 +73,7 @@
 	}
 
 	h2, h3, h4, h5, h6 {
-		color: _palette(fg);
+		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 1) 0;

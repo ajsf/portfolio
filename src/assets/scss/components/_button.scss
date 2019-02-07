@@ -67,7 +67,7 @@
 		&.primary {
 			box-shadow: none;
 			background-color: _palette(fg);
-			color: _palette(bg) !important;
+			color: _palette(fg-accent) !important;
 
 			&:hover {
 				background-color: _palette(accent1);

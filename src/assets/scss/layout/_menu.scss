@@ -22,7 +22,7 @@
 		height: 100%;
 		-webkit-overflow-scrolling: touch;
 		background: _palette(fg);
-		color: _palette(bg);
+		color: _palette(fg-accent);
 		cursor: default;
 		visibility: hidden;
 		z-index: _misc(z-index-base) + 2;
@@ -38,6 +38,10 @@
 			padding: 2.75em;
 			opacity: 0;
 			overflow-y: auto;
+
+			h2 {
+				color: _palette(bg-alt)
+			}
 
 			> ul {
 				list-style: none;

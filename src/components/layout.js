@@ -64,7 +64,7 @@ class Layout extends React.Component {
           {children}
           <Footer />
         </div>
-        <Menu domRef={this.childRef} onToggleMenu={this.handleToggleMenu} />}
+        <Menu domRef={this.childRef} onToggleMenu={this.handleToggleMenu} />
       </div>
     )
   }
