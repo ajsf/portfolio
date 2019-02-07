@@ -11,7 +11,10 @@ class HomeIndex extends React.Component {
         <Helmet
           title="Aaron Friedman - Android Developer"
           meta={[
-            { name: 'description', content: 'Android Kotlin Developer' },
+            {
+              name: 'description',
+              content: 'Aaron Friedman - Android Developer',
+            },
             { name: 'keywords', content: 'android, kotlin, mobile' },
           ]}
         />
@@ -21,12 +24,14 @@ class HomeIndex extends React.Component {
               <h1>Hi, I'm Aaron Friedman. I'm an Android developer.</h1>
               <p>
                 I take pride in creating delightful user experiences, with a
-                focus on well-designed and well-tested clean code. I am
-                proficient in web development with React and cross-platform
-                mobile development with React Native, but my passion is for
-                developing native Android apps in Kotlin.
+                focus on well-designed and well-tested code. I am proficient in
+                web development with React and cross-platform mobile development
+                with React Native, but my passion is for developing native
+                Android apps in Kotlin.
                 <br />
-                <br />A few of my projects are highlighted below:
+                <br />A few of my projects are highlighted below. You can see
+                the code for this site{' '}
+                <a href="https://github.com/ajsf/portfolio">here</a>.
               </p>
             </header>
             <Tiles />
