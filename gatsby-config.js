@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Phantom',
+    title: 'Aaron Friedman - Android Developer',
     author: 'Aaron Friedman',
-    description: 'A Gatsby.js V2 Starter based on Phantom by HTML5 UP',
+    description: 'A Developer Portfolio Site',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,5 +20,36 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/projects`,
+        name: 'projects',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          'gatsby-remark-copy-linked-files',
+        ],
+        excerpt_separator: '<!-- end -->',
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }

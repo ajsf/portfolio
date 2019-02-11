@@ -1,19 +1,25 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 
 import Tiles from '../components/Tiles'
 
+import { markdownQueryToProjects } from '../utils/ProjectHelper'
+
 class HomeIndex extends React.Component {
   render() {
+    const { title, description } = this.props.data.site.siteMetadata
+    const projects = markdownQueryToProjects(this.props.data)
+
     return (
       <Layout>
         <Helmet
-          title="Aaron Friedman - Android Developer"
+          title={title}
           meta={[
             {
               name: 'description',
-              content: 'Aaron Friedman - Android Developer',
+              content: { description },
             },
             { name: 'keywords', content: 'android, kotlin, mobile' },
           ]}
@@ -34,7 +40,7 @@ class HomeIndex extends React.Component {
                 <a href="https://github.com/ajsf/portfolio">here</a>.
               </p>
             </header>
-            <Tiles />
+            <Tiles projects={projects} />
           </div>
         </div>
       </Layout>
@@ -43,3 +49,17 @@ class HomeIndex extends React.Component {
 }
 
 export default HomeIndex
+
+export const pageQuery = graphql`
+  query PageQuery {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+    allMarkdownRemark {
+      ...Project
+    }
+  }
+`
