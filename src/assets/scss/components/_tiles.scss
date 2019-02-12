@@ -216,7 +216,7 @@
   }
 
   @include breakpoint('<=xlarge') {
-    $gutter: _size(gutter) * 1.25;
+    $gutter: _size(gutter) * 1.5;
     margin: ($gutter * -1) 0 0 ($gutter * -1);
 
     article {
@@ -268,9 +268,9 @@
   }
 
   @include breakpoint('<=xsmall') {
-    $gutter: _size(gutter) * 0.5;
+    $gutter: _size(gutter) * 0.4;
 
-    margin: 0;
+    margin: $gutter $gutter 0 $gutter;
 
     article {
       width: 100%;
