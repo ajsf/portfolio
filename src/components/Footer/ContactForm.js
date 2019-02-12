@@ -1,7 +1,14 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 
 import isEmail from 'validator/lib/isEmail'
 import trim from 'validator/lib/trim'
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -15,6 +22,21 @@ class ContactForm extends React.Component {
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
   }
 
   formIsValid = () => {
@@ -41,9 +63,13 @@ class ContactForm extends React.Component {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           method="post"
-          action="/success"
+          onSubmit={this.handleSubmit}
+          action="/thanks"
         >
-          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <input name="bot-field" onChange={this.handleChange} />
+          </p>
           <div className="fields">
             <div className="field half">
               <input

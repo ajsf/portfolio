@@ -7,13 +7,12 @@ import Tiles from '../components/Tiles'
 
 import { markdownQueryToProjects } from '../utils/MarkdownHelpers'
 
-class HomeIndex extends React.Component {
+class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { title, description } = data.site.siteMetadata
     const { header, subheader } = data.file.childMarkdownRemark.frontmatter
     const projects = markdownQueryToProjects(this.props.data)
-    console.log(this.props.data)
 
     return (
       <Layout>
@@ -47,7 +46,7 @@ class HomeIndex extends React.Component {
   }
 }
 
-export default HomeIndex
+export default IndexPage
 
 export const pageQuery = graphql`
   query PageQuery {
