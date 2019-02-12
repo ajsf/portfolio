@@ -1,4 +1,5 @@
 ---
+category: Project
 title: Recipe Assistant
 image: './ra_image.png'
 githubLink: 'recipe-assistant'

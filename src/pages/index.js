@@ -5,12 +5,15 @@ import { graphql } from 'gatsby'
 
 import Tiles from '../components/Tiles'
 
-import { markdownQueryToProjects } from '../utils/ProjectHelper'
+import { markdownQueryToProjects } from '../utils/MarkdownHelpers'
 
 class HomeIndex extends React.Component {
   render() {
-    const { title, description } = this.props.data.site.siteMetadata
+    const { data } = this.props
+    const { title, description } = data.site.siteMetadata
+    const { header, subheader } = data.file.childMarkdownRemark.frontmatter
     const projects = markdownQueryToProjects(this.props.data)
+    console.log(this.props.data)
 
     return (
       <Layout>
@@ -27,13 +30,9 @@ class HomeIndex extends React.Component {
         <div id="main">
           <div className="inner">
             <header>
-              <h1>Hi, I'm Aaron Friedman. I'm an Android developer.</h1>
+              <h1>{header}</h1>
               <p>
-                I take pride in creating delightful user experiences, with a
-                focus on well-designed and well-tested code. I am proficient in
-                web development with React and cross-platform mobile development
-                with React Native, but my passion is for developing native
-                Android apps in Kotlin.
+                {subheader}
                 <br />
                 <br />A few of my projects are highlighted below. You can see
                 the code for this site{' '}
@@ -58,8 +57,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark {
-      ...Project
-    }
+    ...AllProjects
+    ...IndexPage
   }
 `

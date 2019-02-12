@@ -1,4 +1,5 @@
 ---
+category: Project
 title: Artzee
 image: "./artzee_image.png"
 githubLink: "Artzee"

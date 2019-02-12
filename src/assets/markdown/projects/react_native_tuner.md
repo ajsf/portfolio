@@ -1,4 +1,5 @@
 ---
+category: Project
 title: React Native Tuner
 image: "./tuner_image.png"
 githubLink: "React-Native-Guitar-Tuner"

@@ -1,4 +1,5 @@
 ---
+category: Project
 title: Android Tuner
 image: "./tuner_image.png"
 githubLink: "AndroidStringTuner"

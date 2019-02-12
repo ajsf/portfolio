@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 
 import Tiles from '../components/Tiles'
 
-import { markdownQueryToProjects } from '../utils/ProjectHelper'
+import { markdownQueryToProjects } from '../utils/MarkdownHelpers'
 
 class ProjectsPage extends React.Component {
   render() {
@@ -44,8 +44,6 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark {
-      ...Project
-    }
+    ...AllProjects
   }
 `
