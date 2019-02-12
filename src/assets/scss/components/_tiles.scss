@@ -216,7 +216,7 @@
   }
 
   @include breakpoint('<=xlarge') {
-    $gutter: _size(gutter) * 1.5;
+    $gutter: _size(gutter) * 1.25;
     margin: ($gutter * -1) 0 0 ($gutter * -1);
 
     article {
@@ -252,6 +252,22 @@
   }
 
   @include breakpoint('<=small') {
+    $gutter: _size(gutter) * 0.25;
+    margin: ($gutter * -1) 0 0 ($gutter * -1);
+
+    article {
+      width: calc(#{(100% / 2)} - #{$gutter * 1});
+      margin: $gutter 0 0 $gutter;
+
+      &:hover {
+        > .image {
+          @include vendor('transform', 'scale(1.0)');
+        }
+      }
+    }
+  }
+
+  @include breakpoint('<=xsmall') {
     $gutter: _size(gutter) * 0.5;
 
     margin: 0;

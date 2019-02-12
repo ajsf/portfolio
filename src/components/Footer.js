@@ -47,14 +47,6 @@ const Footer = props => (
               <span className="label">GitHub</span>
             </a>
           </li>
-          <li>
-            <a
-              href="mailto:aaron.js.friedman@gmail.com"
-              className="icon style2 fa-envelope-o"
-            >
-              <span className="label">Email</span>
-            </a>
-          </li>
         </ul>
       </section>
     </div>
