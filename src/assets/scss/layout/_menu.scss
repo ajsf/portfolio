@@ -20,7 +20,6 @@
 		width: _size(menu);
 		max-width: 80%;
 		height: 100%;
-		-webkit-overflow-scrolling: touch;
 		background: _palette(fg);
 		color: _palette(fg-accent);
 		cursor: default;
@@ -29,7 +28,6 @@
 
 		> .inner {
 			@include vendor('transition', 'opacity #{_duration(menu)} ease');
-			-webkit-overflow-scrolling: touch;
 			position: absolute;
 			top: 0;
 			left: 0;

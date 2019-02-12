@@ -82,7 +82,6 @@
 	input[type="tel"],
 	select,
 	textarea {
-		@include vendor('appearance', 'none');
 		background-color: transparent;
 		border: none;
 		border-radius: 0;
@@ -143,7 +142,6 @@
 
 	input[type="checkbox"],
 	input[type="radio"], {
-		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
 		margin-right: -2em;
