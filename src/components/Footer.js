@@ -5,7 +5,14 @@ const Footer = props => (
     <div className="inner">
       <section>
         <h2>Get in touch</h2>
-        <form method="post" action="#">
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          method="post"
+          action="/success"
+        >
+          <input type="hidden" name="bot-field" />
           <div className="fields">
             <div className="field half">
               <input type="text" name="name" id="name" placeholder="Name" />
@@ -33,12 +40,18 @@ const Footer = props => (
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/aaron-js-friedman/" className="icon style2 fa-linkedin">
+            <a
+              href="https://www.linkedin.com/in/aaron-js-friedman/"
+              className="icon style2 fa-linkedin"
+            >
               <span className="label">GitHub</span>
             </a>
           </li>
           <li>
-            <a href="mailto:aaron.js.friedman@gmail.com" className="icon style2 fa-envelope-o">
+            <a
+              href="mailto:aaron.js.friedman@gmail.com"
+              className="icon style2 fa-envelope-o"
+            >
               <span className="label">Email</span>
             </a>
           </li>
