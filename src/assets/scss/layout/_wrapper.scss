@@ -6,21 +6,37 @@
 
 /* Wrapper */
 
-	#wrapper {
-		> * {
-			> .inner {
-				$gutter: _size(gutter);
+#wrapper {
+  > * {
+    > .inner {
+      $gutter: _size(gutter) * 2;
+      width: 96%;
+      max-width: _size(inner);
+      margin: 0 auto;
+      padding: 0 $gutter;
 
-				width: 100%;
-				max-width: _size(inner);
-				margin: 0 auto;
-				padding: 0 $gutter;
-
-				@include breakpoint('<=small') {
-					$gutter: _size(gutter) * 0.5;
-
-					padding: 0 $gutter;
-				}
-			}
-		}
-	}
+      @include breakpoint('<=large') {
+		$gutter: _size(gutter) * 1.5;
+		width: 90%;				
+        padding: 0 $gutter;
+	  }
+	  
+      @include breakpoint('<=medium') {
+		$gutter: _size(gutter) * 1;
+		width: 86%;				
+        padding: 0 $gutter;
+      }
+	  
+      @include breakpoint('<=small') {
+        $gutter: _size(gutter) * 0.5;
+        padding: 0 $gutter;
+      }
+	  
+      @include breakpoint('<=xsmall') {
+		$gutter: _size(gutter) * 0.5;
+		width: 96%;		
+        padding: 0 $gutter;
+      }
+    }
+  }
+}

@@ -113,8 +113,8 @@
       }
 
       h2 {
-		margin: 0;
-		color: #fff
+        margin: 0;
+        color: #fff;
       }
 
       .content {
@@ -215,7 +215,18 @@
     }
   }
 
+  @include breakpoint('<=xlarge') {
+    $gutter: _size(gutter) * 1.5;
+    margin: ($gutter * -1) 0 0 ($gutter * -1);
+
+    article {
+      width: calc(#{(100% / 2)} - #{$gutter * 1});
+      margin: $gutter 0 0 $gutter;
+    }
+  }
+
   @include breakpoint('<=large') {
+    $gutter: _size(gutter) * 1;
     margin: ($gutter * -1) 0 0 ($gutter * -1);
 
     article {
@@ -226,7 +237,6 @@
 
   @include breakpoint('<=medium') {
     $gutter: _size(gutter) * 0.5;
-
     margin: ($gutter * -1) 0 0 ($gutter * -1);
 
     article {
@@ -241,7 +251,7 @@
     }
   }
 
-  @include breakpoint('<=xsmall') {
+  @include breakpoint('<=small') {
     $gutter: _size(gutter) * 0.5;
 
     margin: 0;

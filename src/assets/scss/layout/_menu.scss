@@ -127,7 +127,7 @@
 
 		@include breakpoint('<=small') {
 			@include vendor('transform', 'translateX(#{_size(menu) * 0.75})');
-			width: (_size(menu) * 0.75);
+			width: (_size(menu) * 0.5);
 
 			> .inner {
 				padding: 2.75em 1.5em;

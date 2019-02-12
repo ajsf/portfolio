@@ -14,11 +14,15 @@
 		line-height: 1.5;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 18pt;
+			font-size: 16pt;
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 17pt;
+			font-size: 15pt;
+		}
+		
+		@include breakpoint('<=medium') {
+			font-size: 14pt;
 		}
 	}
 

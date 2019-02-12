@@ -10,7 +10,7 @@
   @include padding(5em, 0, (3em, 0, -5em, 0));
 
   .title {
-    color: _palette(fg-bold)
+    color: _palette(fg-bold);
   }
 
   .logo {
@@ -80,6 +80,10 @@
             overflow: hidden;
             padding: 0;
             white-space: nowrap;
+
+            @include breakpoint('<=small') {
+              font-size: 0.5em;
+            }
 
             &:before,
             &:after {
