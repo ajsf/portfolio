@@ -4,10 +4,16 @@ import { navigate } from 'gatsby'
 import isEmail from 'validator/lib/isEmail'
 import trim from 'validator/lib/trim'
 
+const MIN_MESSAGE_LENGTH = 20
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
+}
+
+function isStringLengthValid(string, minLength) {
+  return trim(string).length >= minLength
 }
 
 class ContactForm extends React.Component {
@@ -40,13 +46,15 @@ class ContactForm extends React.Component {
   }
 
   formIsValid = () => {
-    const name = trim(this.state.name)
-    const email = trim(this.state.email)
-    const message = trim(this.state.message)
-
-    if (isEmail(email) && name.length >= 2 && message.length > 10) return true
+    if (this.isEmailValid() && this.isNameValid() && this.isMessageValid())
+      return true
     return false
   }
+
+  isNameValid = () => isStringLengthValid(this.state.name, 2)
+  isMessageValid = () =>
+    isStringLengthValid(this.state.message, MIN_MESSAGE_LENGTH)
+  isEmailValid = () => isEmail(trim(this.state.email))
 
   render() {
     const submitButton = this.formIsValid() ? (
@@ -54,6 +62,23 @@ class ContactForm extends React.Component {
     ) : (
       <input disabled type="submit" value="Send" className="primary" />
     )
+
+    const nameWarning =
+      this.state.name !== '' && !this.isNameValid() ? (
+        <p className="warning">Name length must be at least 2</p>
+      ) : null
+
+    const emailWarning =
+      this.state.email !== '' && !this.isEmailValid() ? (
+        <p className="warning">Please enter a valid email address</p>
+      ) : null
+
+    const messageWarning =
+      this.state.message !== '' && !this.isMessageValid() ? (
+        <p className="warning">
+          Message length must be at least {MIN_MESSAGE_LENGTH}
+        </p>
+      ) : null
 
     return (
       <section>
@@ -80,6 +105,7 @@ class ContactForm extends React.Component {
                 onChange={this.handleChange}
                 required
               />
+              {nameWarning}
             </div>
             <div className="field half">
               <input
@@ -90,6 +116,7 @@ class ContactForm extends React.Component {
                 onChange={this.handleChange}
                 required
               />
+              {emailWarning}
             </div>
             <div className="field">
               <textarea
@@ -99,6 +126,7 @@ class ContactForm extends React.Component {
                 onChange={this.handleChange}
                 required
               />
+              {messageWarning}
             </div>
           </div>
           <ul className="actions">

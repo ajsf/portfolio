@@ -52,6 +52,12 @@
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
+
+		&.warning {
+			color: _palette(warning);
+			font-size: .9em;
+			vertical-align: sub;
+		}
 	}
 
 	h1 {
