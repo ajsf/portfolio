@@ -8,6 +8,9 @@ import Helmet from 'react-helmet'
 const ProjectPageTemplate = props => {
   const project = props.data.markdownRemark
   const { title, githubLink } = project.frontmatter
+
+  const link = `https://github.com/ajsf/${githubLink}`
+
   return (
     <div>
       <Layout>
@@ -20,15 +23,15 @@ const ProjectPageTemplate = props => {
             <header>
               <h1>
                 {title}
-                <a
-                  href={`https://github.com/ajsf/${githubLink}`}
-                  className="icon style2 large fa-github"
-                >
+                <a href={link} className="icon style2 large fa-github">
                   <span className="label">GitHub</span>
                 </a>
               </h1>
             </header>
             <div dangerouslySetInnerHTML={{ __html: project.html }} />
+            <p>
+              See the code <a href={link}>here.</a>
+            </p>
           </div>
         </div>
       </Layout>

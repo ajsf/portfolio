@@ -27,6 +27,7 @@ export const allProjects = graphql`
           }
           excerpt
           frontmatter {
+            order
             title
             image {
               childImageSharp {
@@ -57,19 +58,22 @@ export const indexMarkdown = graphql`
 
 export const markdownQueryToProjects = data => {
   if (data.allMarkdownRemark) {
-    return data.allMarkdownRemark.edges.map(edge => {
-      return mapProjectQueryToProjectObject(edge)
-    })
+    return data.allMarkdownRemark.edges
+      .map(edge => {
+        return mapProjectQueryToProjectObject(edge)
+      })
+      .sort((a, b) => a.order - b.order)
   }
   return []
 }
 
 const mapProjectQueryToProjectObject = projectQuery => {
   const { excerpt, frontmatter, fields } = projectQuery.node
-  const { title, image } = frontmatter
+  const { order, title, image } = frontmatter
   const { slug } = fields
 
   return {
+    order: order,
     title: title,
     description: excerpt,
     path: slug,
