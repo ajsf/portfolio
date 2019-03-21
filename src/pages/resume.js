@@ -1,11 +1,31 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import ResumeWorkItem from '../components/ResumeWorkItem'
 import { graphql } from 'gatsby'
 
 class ResumePage extends React.Component {
   render() {
     const { title, description } = this.props.data.site.siteMetadata
+
+    const work1 = [
+      'Oversaw and managed the transition of Electronic Data Interchange (EDI) transactions to HIPAA 5010 standard. Coordinated  with EDI and systems teams, and medical billers to ensure smooth transition with no downtime in payments.',
+      'Oversaw and managed upgrade of the Medicaid claims processing system to support ICD-10 standard. Identified system changes necessary to ensure a smooth transition for providers and performed testing to verify changes were correctly implemented.',
+      'Wrote Python scripts and simple GUI apps to automate repetitive tasks.',
+      'Researched and troubleshoot issues with claims processing system.',
+      'Trained EDI Coordinators',
+    ]
+
+    const work2 = [
+      'Earned the company monetary incentives by scoring perfectly on monthly Service Level Agreement report cards.',
+      'Supervised two teams responsible for data entry and medical claims processing.',
+      'Monitored OCR claims processing.',
+    ]
+
+    const work3 = [
+      'Processed medical claims according to State of Hawaii Med-Quest Division guidelines.',
+      'Performed backup medical claims data entry duties.',
+    ]
 
     return (
       <Layout>
@@ -21,15 +41,44 @@ class ResumePage extends React.Component {
         />
         <div id="main">
           <div className="inner">
-            <header>
-              <p>
-                I take pride in creating delightful user experiences, with a
-                focus on well-designed and well-tested code. I am proficient in
-                web development with React and cross-platform mobile development
-                with React Native, but my passion is for developing native
-                Android apps in Kotlin.
-              </p>
-            </header>
+            <h1>Aaron Friedman</h1>
+            <h2>Work Experience</h2>
+            <ResumeWorkItem
+              title={'SYSTEMS ANALYST / CONDUENT (FORMERLY XEROX)'}
+              dates={'August 2010 - October 2018'}
+              items={work1}
+            />
+            <ResumeWorkItem
+              title={'CLAIMS SUPERVISOR / XEROX (FORMERLY ACS INC.)'}
+              dates={'September 2007 – August 2010'}
+              items={work2}
+            />
+            <ResumeWorkItem
+              title={'CLAIMS RESOLUTION ASSOCIATE / ACS INC.'}
+              dates={'November 2006 – September 2007'}
+              items={work3}
+            />
+            <h2>Education</h2>
+            <h3>SAN FRANCISCO STATE UNIVERSITY</h3>
+            <p>Graduated Cum Laude with a BA in Radio and Television</p>
+            <h2>Other Information</h2>
+            <h3>Techincal Skills</h3>
+            <p>
+              <strong>Languages: </strong> Kotlin, Java, JavaScript, Python
+            </p>
+            <p>
+              <strong>Frameworks/Libraries: </strong> Android, RxJava, React
+              Native, ReactJS, Gatsby, Spring Boot
+            </p>
+            <p>
+              <strong>Databases: </strong> Room, MySQL, Postgres, MongoDB,
+              Firebase
+            </p>
+            <h3>Misc</h3>
+            <h4>Audio Engineer</h4>
+            <p>Fort Union Studio, Yucky Apple Studio</p>
+            <h4>Bassist</h4>
+            <p>for Quadraphonix, a Hawaii-based, freeform world beat band.</p>
           </div>
         </div>
       </Layout>
