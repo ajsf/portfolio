@@ -8,6 +8,12 @@ class ResumePage extends React.Component {
   render() {
     const { title, description } = this.props.data.site.siteMetadata
 
+    const work0 = [
+      'Developing "String Tuner" app, which is currently in beta testing on the Google Play Store.',
+      'Continued development of Artzee and Recipe Assistant apps for personal portfolio.',
+      'Built portfolio website.',
+    ]
+
     const work1 = [
       'Oversaw and managed the transition of Electronic Data Interchange (EDI) transactions to HIPAA 5010 standard. Coordinated  with EDI and systems teams, and medical billers to ensure smooth transition with no downtime in payments.',
       'Oversaw and managed upgrade of the Medicaid claims processing system to support ICD-10 standard. Identified system changes necessary to ensure a smooth transition for providers and performed testing to verify changes were correctly implemented.',
@@ -43,6 +49,11 @@ class ResumePage extends React.Component {
           <div className="inner">
             <h1>Aaron Friedman</h1>
             <h2>Work Experience</h2>
+            <ResumeWorkItem
+              title={'INDIE ANDROID DEVELOPER'}
+              dates={'November 2018 - Present'}
+              items={work0}
+            />
             <ResumeWorkItem
               title={'SYSTEMS ANALYST / CONDUENT (FORMERLY XEROX)'}
               dates={'August 2010 - October 2018'}

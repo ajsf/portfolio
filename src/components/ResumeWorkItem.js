@@ -13,8 +13,8 @@ const ResumeWorkItem = props => {
 
   return (
     <div>
-      <h3>SYSTEMS ANALYST / CONDUENT (FORMERLY XEROX)</h3>
-      <h4>August 2010 - October 2018</h4>
+      <h3>{title}</h3>
+      <h4>{dates}</h4>
       {details}
     </div>
   )
