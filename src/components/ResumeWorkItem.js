@@ -1,8 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-
-import logo from '../assets/images/logo.png'
 
 const ResumeWorkItem = props => {
   const { title, dates, items } = props
