@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import ResumeWorkItem from '../components/ResumeWorkItem'
 import { graphql } from 'gatsby'
+import ResumeItem from '../components/ResumeItem'
 
 class ResumePage extends React.Component {
   render() {
@@ -48,25 +49,31 @@ class ResumePage extends React.Component {
         <div id="main">
           <div className="inner">
             <h1>Aaron Friedman</h1>
-            <h2 className="resume-item">Techincal Skills</h2>
-            <p className="resume-item">
-              <strong>Languages: </strong> Kotlin, Java, JavaScript, Python
-            </p>
-            <p className="resume-item">
-              <strong>Frameworks/Libraries: </strong> Android, RxJava, Android
-              Architecture Components
-              <br />
-              Retrofit, Picasso, JUnit, Mockito, Espresso
-              <br />
-              React Native, ReactJS, Gatsby, Spring Boot
-            </p>
-            <p className="resume-item">
-              <strong>Tools: </strong> Android Studio, Git, Firebase, Docker
-            </p>
-            <p className="resume-item">
-              <strong>Other: </strong> Google Material Design, Reactive
-              Programming, Unit Testing, Object Oriented Design, Design Patterns
-            </p>
+            <h2 className="resume-item">Technical Skills</h2>
+            <ResumeItem
+              title="Languages"
+              items={['Kotlin, Java, JavaScript, Python']}
+            />
+
+            <ResumeItem
+              title="Frameworks/  Libraries"
+              items={[
+                'Android, RxJava, Android Architecture Components,',
+                'Retrofit, Picasso, JUnit, Mockito, Espresso,',
+                'React Native, ReactJS, Gatsby, Spring Boot',
+              ]}
+            />
+            <ResumeItem
+              title="Tools"
+              items={[' Android Studio, Git, Firebase, Docker']}
+            />
+            <ResumeItem
+              title="Other"
+              items={[
+                'Google Material Design, Reactive Programming, Dependency Injection,',
+                'Unit Testing, Object Oriented Design, Design Patterns',
+              ]}
+            />
             <br />
             <h2 className="resume-item">Work Experience</h2>
             <ResumeWorkItem

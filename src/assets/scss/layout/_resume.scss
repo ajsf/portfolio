@@ -1,0 +1,23 @@
+.item-container {
+  display: flex;
+  margin-bottom: _size(element-margin) * 0.5;
+  flex-wrap: wrap;
+}
+
+.item-header {
+  margin-bottom: (_size(element-margin) * 0.2);
+  flex: 1 1 10%;
+}
+
+.item-content {
+  flex: 1 1 65%;
+  margin-left: (_size(element-margin) * 0.5);
+}
+
+.resume-item {
+  margin-bottom: (_size(element-margin) * 0.2);
+}
+
+.display-linebreak {
+  white-space: pre-line;
+}
