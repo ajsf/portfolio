@@ -21,17 +21,27 @@ const ProjectPageTemplate = props => {
         <div id="main">
           <div className="inner">
             <header>
-              <h1>
-                {title}
-                <a href={link} className="icon style2 large fa-github">
-                  <span className="label">GitHub</span>
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                }}
+              >
+                <h1 style={{ margin: 0 }}>{title}</h1>
+                <a
+                  style={{
+                    marginTop: 20,
+                    marginLeft: 'auto',
+                    alignSelf: 'center',
+                  }}
+                  href={link}
+                >
+                  See the code here.
                 </a>
-              </h1>
+              </div>
+              <br />
             </header>
             <div dangerouslySetInnerHTML={{ __html: project.html }} />
-            <p>
-              See the code <a href={link}>here.</a>
-            </p>
           </div>
         </div>
       </Layout>
