@@ -48,7 +48,27 @@ class ResumePage extends React.Component {
         <div id="main">
           <div className="inner">
             <h1>Aaron Friedman</h1>
-            <h2>Work Experience</h2>
+            <h2 className="resume-item">Techincal Skills</h2>
+            <p className="resume-item">
+              <strong>Languages: </strong> Kotlin, Java, JavaScript, Python
+            </p>
+            <p className="resume-item">
+              <strong>Frameworks/Libraries: </strong> Android, RxJava, Android
+              Architecture Components
+              <br />
+              Retrofit, Picasso, JUnit, Mockito, Espresso
+              <br />
+              React Native, ReactJS, Gatsby, Spring Boot
+            </p>
+            <p className="resume-item">
+              <strong>Tools: </strong> Android Studio, Git, Firebase, Docker
+            </p>
+            <p className="resume-item">
+              <strong>Other: </strong> Google Material Design, Reactive
+              Programming, Unit Testing, Object Oriented Design, Design Patterns
+            </p>
+            <br />
+            <h2 className="resume-item">Work Experience</h2>
             <ResumeWorkItem
               title={'INDIE ANDROID DEVELOPER'}
               dates={'November 2018 - Present'}
@@ -69,30 +89,16 @@ class ResumePage extends React.Component {
               dates={'November 2006 – September 2007'}
               items={work3}
             />
-            <h2>Education</h2>
+            <h2 className="resume-item">Education</h2>
             <h3>SAN FRANCISCO STATE UNIVERSITY</h3>
             <p>Graduated Cum Laude with a BA in Radio and Television</p>
-            <h2>Other Information</h2>
-            <h3>Techincal Skills</h3>
-            <p>
-              <strong>Languages: </strong> Kotlin, Java, JavaScript, Python
-            </p>
-            <p>
-              <strong>Frameworks/Libraries: </strong> Android, RxJava, Android Architecture Components<br/>
-              Retrofit, Picasso, JUnit, Mockito, Espresso<br/>
-              React Native, ReactJS, Gatsby, Spring Boot
-            </p>
-            <p>
-              <strong>Tools: </strong> Android Studio, Git, Firebase, Docker
-            </p>
-            <p>
-              <strong>Other: </strong> Object Oriented Design, Reactive Programming, Design Patterns, Unit Testing, Google Material Design
-            </p>
-            <h3>Misc</h3>
+            <h2 className="resume-item">Other Information</h2>
             <h4>Audio Engineer</h4>
             <p>Fort Union Studio, Yucky Apple Studio</p>
             <h4>Bassist</h4>
-            <p>for Quadraphonix, a Hawaii-based, freeform world beat band.</p>
+            <p className="resume-item">
+              for Quadraphonix, a Hawaii-based, freeform world beat band.
+            </p>
           </div>
         </div>
       </Layout>

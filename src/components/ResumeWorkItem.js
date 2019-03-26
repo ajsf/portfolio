@@ -5,7 +5,7 @@ const ResumeWorkItem = props => {
   const { title, dates, items } = props
 
   const details = items.map(item => {
-    return <p>• {item}</p>
+    return <p className="resume-item">• {item}</p>
   })
 
   return (
@@ -13,6 +13,7 @@ const ResumeWorkItem = props => {
       <h3>{title}</h3>
       <h4>{dates}</h4>
       {details}
+      <br />
     </div>
   )
 }
