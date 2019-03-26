@@ -97,7 +97,8 @@ class ResumePage extends React.Component {
             <p>Fort Union Studio, Yucky Apple Studio</p>
             <h4>Bassist</h4>
             <p className="resume-item">
-              for Quadraphonix, a Hawaii-based, freeform world beat band.
+              for <a href="https://www.quadraphonix.com/">Quadraphonix</a>, a
+              Hawaii-based, freeform world beat band.
             </p>
           </div>
         </div>
