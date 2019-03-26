@@ -37,6 +37,7 @@ class IndexPage extends React.Component {
                 the code for this site{' '}
                 <a href="https://github.com/ajsf/portfolio">here</a>.
               </p>
+              <br/>
             </header>
             <Tiles projects={projects} />
           </div>

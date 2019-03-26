@@ -36,7 +36,7 @@ const ProjectPageTemplate = props => {
                   }}
                   href={link}
                 >
-                  See the code here.
+                  See the code on Github.
                 </a>
               </div>
               <br />

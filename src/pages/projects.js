@@ -26,6 +26,12 @@ class ProjectsPage extends React.Component {
         />
         <div id="main">
           <div className="inner">
+            <h1>My Projects</h1>
+            <p>
+              Below are a few of my highlighted projects. Please visit my
+              <a href="https://github.com/ajsf/"> Github page</a> to see more.
+            </p>
+            <br/>
             <Tiles projects={projects} />
           </div>
         </div>
