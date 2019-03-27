@@ -2,6 +2,12 @@
   img {
     max-width: 100%;
     height: auto;
-    margin: 0 _size(element-margin) * 0.25 _size(element-margin) * 0.5;
+    margin: 0 (_size(element-margin)) (_size(element-margin) * 0.5);
+  }
+
+  @include breakpoint('<=medium') {
+    img {
+      margin: 0 (_size(element-margin) * 0.5) (_size(element-margin) * 0.5);
+    }
   }
 }
