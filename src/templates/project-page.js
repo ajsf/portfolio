@@ -27,7 +27,7 @@ const ProjectPageTemplate = props => {
                   flexWrap: 'wrap',
                 }}
               >
-                <h1 style={{ margin: 0 }}>{title}</h1>
+                <h1 style={{ marginRight: 8, marginBottom: 0 }}>{title}</h1>
                 <a
                   style={{
                     marginTop: 20,
@@ -41,7 +41,10 @@ const ProjectPageTemplate = props => {
               </div>
               <br />
             </header>
-            <div dangerouslySetInnerHTML={{ __html: project.html }} />
+            <div
+              id="project"
+              dangerouslySetInnerHTML={{ __html: project.html }}
+            />
           </div>
         </div>
       </Layout>

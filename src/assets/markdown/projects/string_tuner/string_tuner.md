@@ -11,3 +11,7 @@ An Android app for tuning instruments, written in Kotlin.<!-- end --> It has a c
 This app uses the Model-View-ViewModel UI architecture pattern. RxJava is used for the audio input to frequency detection processing chain, and LiveData is used for UI updates. [TarsosDSP](https://github.com/JorenSix/TarsosDSP) is used for the frequency detection.
 
 ![Screenshot](./screenshot1.png)
+![Screenshot](./screenshot2.png)
+![Screenshot](./screenshot3.png)
+![Screenshot](./screenshot4.png)
+![Screenshot](./screenshot5.png)

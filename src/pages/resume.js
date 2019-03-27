@@ -17,8 +17,8 @@ class ResumePage extends React.Component {
 
     const work1 = [
       'Wrote Python scripts and simple GUI apps to automate repetitive tasks.',
-      'Oversaw and managed the transition of Electronic Data Interchange (EDI) transactions to HIPAA 5010 standard. Coordinated  with EDI and systems teams, and medical billers to ensure smooth transition with no downtime in payments.',
-      'Oversaw and managed upgrade of the Medicaid claims processing system to support ICD-10 standard. Identified system changes necessary to ensure a smooth transition for providers and performed testing to verify changes were correctly implemented.',
+      'Oversaw and managed the transition of Electronic Data Interchange (EDI) transactions from HIPAA 4010 to HIPAA 5010 standards. Coordinated  with EDI and systems teams, and medical billers to ensure a smooth transition with no downtime in payments.',
+      'Oversaw and managed upgrade of the Medicaid claims processing system to support ICD-10 standards. Identified system changes necessary to ensure a smooth transition for providers and performed testing to verify changes were correctly implemented.',
       'Researched and troubleshot issues with claims processing system.',
       'Trained EDI Coordinators.',
     ]
