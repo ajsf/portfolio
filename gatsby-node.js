@@ -43,7 +43,11 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type == 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode })
+    let slug = createFilePath({ node, getNode, trailingSlash: false })
+    if (slug !== '/page_info') {
+      slug = slug.substring(0, slug.lastIndexOf('/'))
+    }
+
     createNodeField({ node, name: 'slug', value: slug })
   }
 }

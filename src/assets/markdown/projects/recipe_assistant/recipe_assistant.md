@@ -10,12 +10,13 @@ An Android app that pulls recipes from TheMealDb, and can read the recipes out l
 
 With data provided by the [TheMealDb](https://www.themealdb.com/), this app uses Room and the Paging Library to offer continous scrolling while browsing recipes. It fetches the recipe thumbnails asynchronously, and display the recipe title, allowing smooth continuous user interaction.
 
-![Screenshot](./screenshot1.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot3.png)
+![Screenshot](./screenshot1.png)&nbsp;![Screenshot](./screenshot3.png)
 
 Once a recipe has been selected, voice recognition can be activated, which is implemented using [PocketSphinx](https://github.com/cmusphinx/pocketsphinx). Using either voice activation, or buttons, the user can have the recipe read out loud, which is implemented using [Android TextToSpeech](https://developer.android.com/reference/android/speech/tts/TextToSpeech).
 
-![Screenshot](./screenshot2.png)
+![Screenshot](./screenshot2.png)&nbsp;![Screenshot](./screenshot7.png)
 
 The app has responsive layouts for both browsing and reading recipes.
 
-![Screenshot](./screenshot4.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot5.png)
+![Screenshot](./screenshot4.png)&nbsp;![Screenshot](./screenshot5.png)
+![Screenshot](./screenshot6.png)

@@ -1,9 +1,8 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 import Helmet from 'react-helmet'
-// import Img from 'gatsby-image'
 
 const ProjectPageTemplate = props => {
   const project = props.data.markdownRemark
@@ -45,6 +44,10 @@ const ProjectPageTemplate = props => {
               id="project"
               dangerouslySetInnerHTML={{ __html: project.html }}
             />
+            <p>
+              View
+              <Link to="/projects/"> more projects</Link>.
+            </p>
           </div>
         </div>
       </Layout>
