@@ -10,8 +10,8 @@ class ResumePage extends React.Component {
     const { title, description } = this.props.data.site.siteMetadata
 
     const work0 = [
-      'Developing "String Tuner" app, which is currently in beta testing on the Google Play Store.',
-      'Continued development of Artzee and Recipe Assistant apps for personal portfolio.',
+      'Developing "Instrutuner", an Android app for tuning instruments, which is currently in beta testing on the Google Play Store.',
+      'Continued development of Artzee, Recipe Assistant, and Android Flashcard apps for personal portfolio.',
       'Built portfolio website.',
     ]
 
