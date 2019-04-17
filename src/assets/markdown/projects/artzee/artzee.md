@@ -15,8 +15,7 @@ This was a project to experiment with the Android Architecture Components. It us
 The app uses prefetching to provide smooth scrolling, with placeholders and loading indicators to provide a pleasing visual experience for when the user is scrolling faster than the data can loaded.
 
 ![Screenshot](./screenshot3.png)
-  
-  
-Responsive layouts for browsing and viewing art round out the user experience.
+
+Animations and responsive layouts round out the user experience. You can see screen captures of the animations on the [Github page](https://www.github.com/ajsf/Artzee).
 
 ![Screenshot](./screenshot5.png)&nbsp;![Screenshot](./screenshot4.png)
