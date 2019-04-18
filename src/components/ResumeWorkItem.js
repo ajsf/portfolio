@@ -4,8 +4,19 @@ import PropTypes from 'prop-types'
 const ResumeWorkItem = props => {
   const { title, dates, items } = props
 
-  const details = items.map(item => {
-    return <p className="resume-item">• {item}</p>
+  const details = Object.keys(items).map(item => {
+    return (
+      <div key={item}>
+        <p className="resume-item">• {item}</p>
+        {items[item].map(subItem => {
+          return (
+            <p className="resume-subitem" key={subItem}>
+              • {subItem}
+            </p>
+          )
+        })}
+      </div>
+    )
   })
 
   return (
@@ -21,7 +32,7 @@ const ResumeWorkItem = props => {
 ResumeWorkItem.propTypes = {
   title: PropTypes.string,
   dates: PropTypes.string,
-  items: PropTypes.array,
+  items: PropTypes.object,
 }
 
 export default ResumeWorkItem

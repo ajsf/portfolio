@@ -9,30 +9,34 @@ class ResumePage extends React.Component {
   render() {
     const { title, description } = this.props.data.site.siteMetadata
 
-    const work0 = [
-      'Developing "Instrutune", an Android app for tuning instruments, which is currently in beta testing on the Google Play Store.',
-      'Continued development of Artzee, Recipe Assistant, and Android Flashcard apps for personal portfolio.',
-      'Built portfolio website.',
-    ]
+    const work0 = {
+      'Developed Instrutune, an Android app for tuning instruments.': [
+        'TarsosDSP is used for frequency detection, the result of which is converted into an RxJava Flowable, allowing the use of RxJava operators to filter out noise and silence, and to map sounds to a note on a musical instrument.',
+        'Uses the MVVM architecture pattern. In the ViewModel, the Flowable result is converted to LiveData to take advantage of the automatic UI lifecycle handling that LiveData offers.',
+        'Room is used for data persistence.',
+        'Has animations and a responsive UI for a pleasing user experience.',
+        'With more than 250 units tests, it is well set-up for maintainability and is currently available in beta testing in Google Play.',
+      ],
+      'Developed Recipe Assistant, an Android app for reading recipes. ': [
+        'Uses Android TextToSpeech to read recipes aloud, and PocketSphinx to respond to voice commands.',
+        'Written in Java, I converted the app to Kotlin in 2018. It was then refactored to utilize the Paging library and Room for an offline first experience with infinite scrolling. Retrofit is used for networking.',
+      ],
+      'Developed Artzee and continued development of Android Flashcards.': [],
+      'Built portfolio website, AJSF.TECH, using Gatsby and React.': [],
+    }
 
-    const work1 = [
-      'Wrote Python scripts and simple GUI apps to automate repetitive tasks.',
-      'Oversaw and managed the transition of Electronic Data Interchange (EDI) transactions from HIPAA 4010 to HIPAA 5010 standards. Coordinated  with EDI and systems teams, and medical billers to ensure a smooth transition with no downtime in payments.',
-      'Oversaw and managed upgrade of the Medicaid claims processing system to support ICD-10 standards. Identified system changes necessary to ensure a smooth transition for providers and performed testing to verify changes were correctly implemented.',
-      'Researched and troubleshot issues with claims processing system.',
-      'Trained EDI Coordinators.',
-    ]
+    const work1 = {
+      'Wrote Python scripts and simple GUI apps to automate repetitive tasks': [],
+      'Managed the transition of Electronic Data Interchange transactions from HIPAA 4010 to HIPAA 5010 standards. Coordinated with multiple teams and clients to ensure a smooth transition.': [],
+      'Managed upgrade of the Medicaid claims processing system to support ICD-10 standards. Identified system changes necessary to ensure a smooth transition and performed testing to verify changes were correctly implemented.': [],
+      'Researched and troubleshot issues with claims processing system.': [],
+    }
 
-    const work2 = [
-      'Earned the company monetary incentives by scoring perfectly on monthly Service Level Agreement report cards.',
-      'Supervised two teams responsible for data entry and medical claims processing.',
-      'Monitored OCR claims processing.',
-    ]
-
-    const work3 = [
-      'Processed medical claims according to State of Hawaii Med-Quest Division guidelines.',
-      'Performed backup medical claims data entry duties.',
-    ]
+    const work2 = {
+      'Earned the company monetary incentives by scoring perfectly on monthly Service Level Agreement report cards.': [],
+      'Supervised two teams responsible for data entry and medical claims processing.': [],
+      'Monitored OCR claims processing.': [],
+    }
 
     return (
       <Layout>
@@ -58,7 +62,7 @@ class ResumePage extends React.Component {
             <ResumeItem
               title="Frameworks/  Libraries"
               items={[
-                'Android, RxJava, Android Architecture Components,',
+                'Android, RxJava, Android Jetpack,',
                 'Retrofit, Picasso, JUnit, Mockito, Espresso,',
                 'React Native, ReactJS, Gatsby, Spring Boot',
               ]}
@@ -78,7 +82,7 @@ class ResumePage extends React.Component {
             <h2 className="resume-item">Work Experience</h2>
             <ResumeWorkItem
               title={'INDIE ANDROID DEVELOPER'}
-              dates={'November 2018 - Present'}
+              dates={'May 2017 - Present'}
               items={work0}
             />
             <ResumeWorkItem
@@ -91,14 +95,17 @@ class ResumePage extends React.Component {
               dates={'September 2007 – August 2010'}
               items={work2}
             />
-            <ResumeWorkItem
-              title={'CLAIMS RESOLUTION ASSOCIATE / ACS INC.'}
-              dates={'November 2006 – September 2007'}
-              items={work3}
-            />
             <h2 className="resume-item">Education</h2>
             <h3>SAN FRANCISCO STATE UNIVERSITY</h3>
             <p>Graduated Cum Laude with a BA in Radio and Television</p>
+            <h2 className="resume-item">Certifications</h2>
+            <h4>Triplebyte</h4>
+            <p>
+              April 2019 - {' '}
+              <a href="https://triplebyte.com/certificate/SartCl8">
+                 Triplebyte certified Android Engineer
+              </a>
+            </p>
             <h2 className="resume-item">Other Information</h2>
             <h4>Audio Engineer</h4>
             <p>Fort Union Studio, Yucky Apple Studio</p>

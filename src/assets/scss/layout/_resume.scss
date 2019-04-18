@@ -18,6 +18,12 @@
   margin-bottom: (_size(element-margin) * 0.2);
 }
 
+
+.resume-subitem {
+  margin-bottom: (_size(element-margin) * 0.2);
+  padding-left:  (_size(element-margin))
+}
+
 .display-linebreak {
   white-space: pre-line;
 }

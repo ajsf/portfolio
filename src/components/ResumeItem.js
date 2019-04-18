@@ -5,7 +5,7 @@ const ResumeItem = props => {
   const { title, items } = props
 
   const details = items.map(item => {
-    return <p className="resume-item">{item}</p>
+    return <p className="resume-item" key={item} >{item}</p>
   })
 
   return (
