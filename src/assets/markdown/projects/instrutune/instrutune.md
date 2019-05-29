@@ -14,18 +14,16 @@ The app has animations and responsive layouts for pleasing user experience. You 
 
 [Download the beta version on Google Play.](https://play.google.com/store/apps/details?id=tech.ajsf.instrutune)
 
-![Screenshot](./screenshot1.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot2.png)
+![Screenshot](./screenshot1.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot3.png)
+
+![Screenshot](./screenshot2.png)
 
 ![Screenshot](./screenshot4.png)
 
-![Screenshot](./screenshot3.png)
+![Screenshot](./screenshot-chromatic.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot5.png)
 
-![Screenshot](./screenshot5.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot6.png)
-
-![Screenshot](./screenshot7.png)
+![Screenshot](./screenshot6.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot7.png)
 
 The app also has a feature that allows you to create custom tunings.
 
-![Screenshot](./screenshot8.png)
-
-![Screenshot](./screenshot9.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot10.png)
+![Screenshot](./screenshot8.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot9.png)&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot](./screenshot10.png)
